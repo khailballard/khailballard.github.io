@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about
+title: About
 ---
 
 [Wassup, homes](http://youtu.be/2EBCe-lPprs).  Kick back, relax, and smoke this bubble pipe.  There's some chocolate milk on the coffee table if you'd like.

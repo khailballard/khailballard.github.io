@@ -6,13 +6,13 @@
     <div class="container">
         <div class="logo">
             <center>
-                <a href="http://www.reconditewoods.com/"><img src="/images/logo.png" /></a>
+                <a href="{{ site.baseurl }}"><img src="/images/logo.png" /></a>
             </center>
         </div>
         <div class="horizontalList">
             <ul>
-                <li><a href="http://www.reconditewoods.com/1/">First</a></li>
-                <li><a href="http://www.reconditewoods.com/archive/">Archive</a></li>
+                <li><a href="{{ site.baseurl }}/1/">First</a></li>
+                <li><a href="{{ site.baseurl }}/archive/">Archive</a></li>
                 {% for post in site.posts limit:1 %}
                 <li><a href="{{ post.url }}">Latest</a></li>
                 {% endfor %}
