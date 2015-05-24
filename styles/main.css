@@ -11,13 +11,44 @@ a {
     text-decoration: underline;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
 body {
+    margin: 0;
+    padding: 0;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
     background: url('/images/background.jpg') no-repeat center center fixed;
     background-color: #112a03;
     background-size: cover;
     color: #f1edd0;
     font-family: '1942_report1942_report', Times, Georgia;
     font-size: 30px;
+}
+
+@media (min-width: 38em) {
+    html {
+        font-size: 18px;
+    }
+}
+
+img {
+    display: block;
+    max-width: calc(100% - 300px);
+    margin: 0 0 1rem;
+}
+
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .horizontalList ul {
@@ -36,7 +67,10 @@ body {
     padding: 20px 50px;
 }
 
-.postDate {
+.post-date {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 20px;
 }
 
