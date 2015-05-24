@@ -37,11 +37,12 @@ body {
 }
 
 .postDate {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 footer {
-    margin-bottom: 75px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     font-family: Verdana, Arial;
     font-size: 14px;
 }
