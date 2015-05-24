@@ -1,5 +1,10 @@
 var init = function() {
-    console.log(parseURL());
+    var param = parseURL();
+
+    if (param == 'archive') {
+        document.getElementById('arrow_left').style.display = 'none';
+        document.getElementById('arrow_right').style.display = 'none';
+    }
 };
 
 var parseURL = function() {
