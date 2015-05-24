@@ -4,6 +4,8 @@ var init = function() {
     if (param == 'archive') {
         document.getElementById('arrow_left').style.opacity = 0;
         document.getElementById('arrow_right').style.opacity = 0;
+    } else {
+        console.log(parseInt(param));
     }
 };
 
