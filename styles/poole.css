@@ -85,16 +85,6 @@ a.pagination-item:hover {
     }
 }
 
-.page,
-.post {
-    margin-bottom: 4em;
-}
-
-.page-title,
-.post-title {
-    margin-top: 0;
-}
-
 .post-date {
     display: block;
     margin-top: -.5rem;
