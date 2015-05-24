@@ -14,6 +14,13 @@ title: Home
     </article>
     {% endfor %}
 </div>
+<div class="horizontalList">
+    <ul>
+        <li><a href="test">About</a></li>
+        <li><a href="test">Twitter</a></li>
+        <li><a href="test">Tumblr</a></li>
+    </ul>
+</div>
 <div class="pagination">
     {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a> {% else %}
