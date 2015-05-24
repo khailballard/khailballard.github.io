@@ -17,6 +17,7 @@ body {
     background-size: cover;
     color: #f1edd0;
     font-family: '1942_report1942_report', Times, Georgia;
+    font-size: 15px;
 }
 
 .horizontalList ul {
@@ -32,5 +33,5 @@ body {
 
 .horizontalList ul li a {
     text-decoration: none;
-    padding: .2em 1em;
+    padding: 20px 50px;
 }
