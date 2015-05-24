@@ -1,0 +1,28 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Recondite Woods
+tagline:             A sweet web comic
+url:                 http://www.reconditewoods.com/
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Khail Ballard
+  url:               https://twitter.com/KhailBallard
+  email:             reconditewoods@gmail.com
+
+# Custom vars
+version:             1.0.0
