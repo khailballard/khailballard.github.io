@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="http://www.reconditewoods.com/1/">First</a></li>
                 <li><a href="test">Archive</a></li>
-                {% for post in posts %}
+                {% for post in site.posts limit:1 %}
                 <li><a href="{{ post.url }}">Latest</a></li>
                 {% endfor %}
             </ul>
