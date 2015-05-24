@@ -5,7 +5,9 @@ var init = function() {
         document.getElementById('arrow_left').style.opacity = 0;
         document.getElementById('arrow_right').style.opacity = 0;
     } else {
-        console.log(parseInt(param));
+        console.log(param);
+        document.getElementById('arrow_left').href = "http://www.reconditewoods.com/" + (parseInt(param) - 1) + "/";
+        document.getElementById('arrow_right').href = "http://www.reconditewoods.com/" + (parseInt(param) + 1) + "/";
     }
 };
 
