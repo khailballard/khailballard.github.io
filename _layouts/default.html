@@ -2,7 +2,7 @@
 <html lang="en">
 {% include head.html %}
 
-<body>
+<body onload="init()">
     <div class="container">
         <div class="logo">
             <center>
@@ -22,11 +22,11 @@
             <table style="width: 100%">
                 <tr>
                     <td style="width: 150px height: auto">
-                        <img src="/images/arrow_left.png" />
+                        <img id="arrow_left" src="/images/arrow_left.png" />
                     </td>
                     <td><div style="margin-left: 50px">{{ content }}</div></td>
                     <td style="width: 150px; height: auto">
-                        <img style="margin-left: 50px" src="/images/arrow_right.png" />
+                        <img id="arrow_right" style="margin-left: 50px" src="/images/arrow_right.png" />
                     </td>
                 </tr>
             </table>
