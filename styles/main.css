@@ -9,6 +9,11 @@
     font-style: normal;
 }
 
+a {
+    color: #f1edd0;
+    text-decoration: underline;
+}
+
 body {
     background: url('/images/background.jpg') no-repeat center center fixed;
     background-color: #112a03;
