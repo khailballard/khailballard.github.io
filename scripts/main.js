@@ -2,8 +2,8 @@ var init = function() {
     var param = parseURL();
 
     if (param == 'archive') {
-        document.getElementById('arrow_left').style.display = 'none';
-        document.getElementById('arrow_right').style.display = 'none';
+        document.getElementById('arrow_left').style.opacity = 0;
+        document.getElementById('arrow_right').style.opacity = 0;
     }
 };
 
