@@ -1,13 +1,12 @@
 var init = function() {
-    var url = window.location.href.split('/');
-
-    var current = parseInt(url[3]);
+    var param = window.location.href.split('/')[3];
+    var current = parseInt(param[3]);
     var latest = parseInt(document.getElementById('latestPostNumber').innerHTML);
 
     var enabledOpacity = 1;
     var disabledOpacity = 0;
 
-    console.log(current, current.length);
+    console.log(param, current, current.length);
 
     if (current > 0) {
         document.getElementById('arrow_left_image').style.opacity = enabledOpacity;
