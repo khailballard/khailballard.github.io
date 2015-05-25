@@ -6,7 +6,7 @@ var init = function() {
     var enabledOpacity = 1;
     var disabledOpacity = 0;
 
-    console.log(param, current, current.length);
+    console.log(param, param.length, current, current.length);
 
     if (current > 0) {
         document.getElementById('arrow_left_image').style.opacity = enabledOpacity;
