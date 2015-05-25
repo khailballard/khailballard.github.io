@@ -10,14 +10,14 @@
             </center>
         </div>
         {% for post in site.posts limit:1 %}
-            <div id="latestPostNumber" style="display: none">{{ post.title }}</div>
+        <div id="latestPostNumber" style="display: none">{{ post.title }}</div>
         {% endfor %}
         <div class="horizontalList">
             <ul>
                 <li><a href="{{ site.baseurl }}/1/">First</a></li>
                 <li><a href="{{ site.baseurl }}/archive/">Archive</a></li>
                 {% for post in site.posts limit:1 %}
-                    <li><a href="{{ post.url }}">Latest</a></li>
+                <li><a href="{{ post.url }}">Latest</a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -25,9 +25,11 @@
             <table style="width: 100%">
                 <tr>
                     <td style="width: 150px height: auto">
-                        <a id="arrow_left" href="#">
-                            <img id="arrow_left_image" src="/images/arrow_left.png" />
-                        </a>
+                        <div>
+                            <a id="arrow_left" href="#">
+                                <img id="arrow_left_image" src="/images/arrow_left.png" />
+                            </a>
+                        </div>
                     </td>
                     <td>
                         <div style="margin-left: 50px">{{ content }}</div>
