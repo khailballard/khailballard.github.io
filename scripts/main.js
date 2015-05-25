@@ -5,8 +5,8 @@ var init = function() {
     console.log(current, latest);
 
     if (current == 'archive') {
-        document.getElementById('arrow_left_image').style.opacity = 0;
-        document.getElementById('arrow_right_image').style.opacity = 0;
+        document.getElementById('arrow_left').style.opacity = 0;
+        document.getElementById('arrow_right').style.opacity = 0;
     } else {
         if (current.length) {
             if (parseInt(current) > 1) {
