@@ -8,9 +8,7 @@ var init = function() {
         document.getElementById('arrow_left').style.opacity = 0;
         document.getElementById('arrow_right').style.opacity = 0;
     } else {
-        console.log(current.length);
-
-        if (current) {
+        if (current.length) {
             if (parseInt(current) > 1) {
                 document.getElementById('arrow_left').href = "http://www.reconditewoods.com/" + (parseInt(current) - 1) + "/";
             } else {
