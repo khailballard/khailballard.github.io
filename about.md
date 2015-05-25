@@ -3,8 +3,9 @@ layout: page
 title: About
 ---
 
-[Wassup, homes](http://youtu.be/2EBCe-lPprs).  Kick back, relax, and smoke this bubble pipe.  There's some chocolate milk on the coffee table if you'd like.
+*About Recondite*  
+The Recondite Woods cover much. They know many things that they do not tell. They do not reveal their secrets. They do not make sense. This is all Conrad knows and all he wants to. He just knows that he can focus a lot better in the Recondite Woods, regardless of all the things he sees that try to bite, attack, eat, seduce, bribe, or otherwise marvel him.  
+There's other people too.
 
-The name's Jesse.  Jesse **Millar**.  I'm a pretty cool guy. I'm basically addicted to programming and game design. I'm an information technology student at BYU.  I currently get paid to design better user experiences for Edge Services.  I longboard. I dig penguins.  I draw.  I like [my wife](http://www.twitter.com/stephiemillar) **A LOT.**
-
-Oh, and I can't get fat.  I've tried.
+*About the Author*  
+Khail Ballard got lost in the woods and hasn't been seen since early 2013. Though believed dead, a cult has arisen that believes he will come back bringing tidings of woe and apathy. They are sworn to fry him the second he shows his sorry head.

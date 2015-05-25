@@ -9,6 +9,9 @@
                 <a href="http://www.reconditewoods.com/"><img src="/images/logo.png" /></a>
             </center>
         </div>
+        {% for post in site.posts limit:1 %}
+        <div id="latestPostNumber" style="display: none">{{ post.title }}</div>
+        {% endfor %}
         <div class="horizontalList">
             <ul>
                 <li><a href="{{ site.baseurl }}/1/">First</a></li>
@@ -23,14 +26,18 @@
                 <tr>
                     <td style="width: 150px height: auto">
                         <a id="arrow_left" href="#">
-                        <img src="/images/arrow_left.png" />
+                            <img src="/images/arrow_left.png" />
                         </a>
                     </td>
-                    <td><div style="margin-left: 50px">{{ content }}</div></td>
+                    <td>
+                        <div style="margin-left: 50px">{{ content }}</div>
+                    </td>
                     <td style="width: 150px; height: auto">
-                        <a id="arrow_right" href="#" style="margin-left: 50px">
-                            <img src="/images/arrow_right.png" />
-                        </a>
+                        <div style="margin-left: 50px">
+                            <a id="arrow_right" href="#">
+                                <img src="/images/arrow_right.png" />
+                            </a>
+                        </div>
                     </td>
                 </tr>
             </table>
