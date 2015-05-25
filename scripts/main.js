@@ -7,6 +7,8 @@ var init = function() {
     var enabledOpacity = 1;
     var disabledOpacity = 0;
 
+    console.log(current, current.length);
+
     if (current > 0) {
         document.getElementById('arrow_left_image').style.opacity = enabledOpacity;
         document.getElementById('arrow_right_image').style.opacity = enabledOpacity;
@@ -22,5 +24,10 @@ var init = function() {
         } else {
             document.getElementById('arrow_right_image').style.opacity = disabledOpacity;
         }
+    } else if (current.length === 0) { // If we're on the homepage
+        document.getElementById('arrow_left_image').style.opacity = enabledOpacity;
+
+        document.getElementById('arrow_left').href = "http://www.reconditewoods.com/" + (latest - 1) + "/";
+        document.getElementById('arrow_right_image').style.opacity = disabledOpacity;
     }
 };
