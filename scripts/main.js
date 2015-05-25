@@ -1,6 +1,6 @@
 var init = function() {
     var param = window.location.href.split('/')[3];
-    var current = parseInt(param[3]);
+    var current = parseInt(param);
     var latest = parseInt(document.getElementById('latestPostNumber').innerHTML);
 
     var enabledOpacity = 1;
