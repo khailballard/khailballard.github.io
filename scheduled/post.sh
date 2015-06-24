@@ -3,14 +3,24 @@ printf "Enter the post number of the post to move: "
 read post_number
 
 # Check if that post exists
-if [ ! -f prepared/$post_number.md ]
+if [ $post_number="next" ]
 then
-    printf "That post does not appear to exist\n"
-    exit
+    for i in prepared/*.md
+    do
+        post_number=$(basename "$i" .md)
+        break # We only want the first one, so break after the first iteration
+    done
+else
+    if [ ! -f prepared/$post_number.md ]
+    then
+        printf "That post does not appear to exist\n"
+        exit
+    fi
 fi
 
+
 # Ask for post date (allow for appending current date)
-printf "Enter the date for this post in year-month-day (EG: 2015-6-20) format or \"today\" if posting today's post today: "
+printf "Enter the date for post $post_number in year-month-day (EG: 2015-6-20) format or \"today\" if posting today's post today: "
 read post_date
 
 if [ $post_date="today" ]
