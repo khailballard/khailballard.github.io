@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Ask which post to post
 printf "Enter the post number of the post to move: "
 read post_number

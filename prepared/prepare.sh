@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Check for .jpeg files
 image_count = 0
 
