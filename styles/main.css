@@ -45,13 +45,9 @@ img {
     margin: 0 0 1rem;
 }
 
-.logo img {
-    height: 200px;
-    width: auto;
-}
-
 .update_schedule {
     font-size: 18px;
+    padding-bottom: 20px;
 }
 
 .container {
