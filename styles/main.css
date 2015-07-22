@@ -50,6 +50,10 @@ img {
     width: auto;
 }
 
+.update_schedule {
+    font-size: 12px;
+}
+
 .container {
     min-width: 900px;
     max-width: 1300px;
