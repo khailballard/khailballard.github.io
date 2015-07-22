@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check for .jpeg files
-image_count = 0
+image_count=0
 
 for i in *.jpeg
 do
@@ -38,7 +38,7 @@ do
     printf "Enter alt text for strip $(basename "$i" .png): "
     read alt_text
 
-    echo "---\nlayout: post\n---\n\n![strip](/images/posts/"$i" \"$alt_text\")" > $(basename "$i" .png).md
+    echo -e "---\nlayout: post\n---\n\n![strip](/images/posts/"$i" \"$alt_text\")" > $(basename "$i" .png).md
 done
 
 # Move image and post file to /archive/prepared
