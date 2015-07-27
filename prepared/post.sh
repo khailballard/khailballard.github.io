@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ask which post to post
-printf "Enter the post number of the post to move: "
+printf "Enter the post number of the post to move or \"next\" to auto select the next post: "
 read post_number
 
 # Check if that post exists
