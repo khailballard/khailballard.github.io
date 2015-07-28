@@ -77,6 +77,10 @@ img {
     font-size: 20px;
 }
 
+.about {
+    font-family: 'Lora', serif;
+}
+
 footer {
     margin-top: 50px;
     margin-bottom: 100px;
