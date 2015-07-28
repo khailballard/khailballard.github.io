@@ -7,7 +7,7 @@
 }
 
 a {
-    color: #f1edd0;
+    color: #111111;
     text-decoration: underline;
 }
 
@@ -21,14 +21,11 @@ html,
 body {
     margin: 0;
     padding: 0;
-
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-
     background: url('/images/background.jpg') no-repeat center center fixed;
-    background-color: #112a03;
     background-size: cover;
-    color: #f1edd0;
+    color: #111111;
     font-family: '1942_report1942_report', Times, Georgia;
     font-size: 30px;
 }
