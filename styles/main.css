@@ -24,6 +24,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     background: url('/images/background.jpg') no-repeat center center fixed;
+    background-color: #659e35;
     background-size: cover;
     color: #111111;
     font-family: '1942_report1942_report', Times, Georgia;
