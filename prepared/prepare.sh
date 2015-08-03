@@ -3,6 +3,14 @@
 # Check for .jpeg files
 image_count=0
 
+for i in *.jpg # Catch "improperly" named files
+do
+    if [ "$i" ] # Only perform if the file exists
+    then
+        mv "$i" "${i%.jpg}.jpeg" # Normalize all files to .jpeg extensions
+    fi
+done
+
 for i in *.jpeg
 do
     ((image_count++))
@@ -17,7 +25,7 @@ fi
 for i in *.jpeg
 do
     printf "."
-    mv "$i" $(echo "$i" | sed -e "s/Strip //g")
+    mv "$i" $(echo "$i" | sed -e "s/Strip \{0,1\}0//g")
 done
 
 # Resize images and convert to .png

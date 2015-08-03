@@ -20,7 +20,6 @@ else
     fi
 fi
 
-
 # Ask for post date (allow for appending current date)
 printf "Enter the date for post $post_number in year-month-day (EG: 2015-6-20) format or \"today\" if posting today's post today: "
 read post_date
