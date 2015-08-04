@@ -3,13 +3,14 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-    {% for post in site.posts %}
-    <article class="post">
-        <div id="postNumber" style="display: none">{{ post.title }}</div>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-        </a>
-    </article>
-    {% endfor %}
+<div class="archive">
+    <ul>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </div>

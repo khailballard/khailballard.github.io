@@ -75,7 +75,13 @@ img {
     display: block;
     margin-top: 25px;
     margin-bottom: 50px;
-    font-size: 20px;
+    font-size: 22px;
+}
+
+.archive ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 .about {
