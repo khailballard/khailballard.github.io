@@ -72,9 +72,8 @@ img {
 }
 
 .ads {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 35px;
+    margin-left: calc(50% - 468px / 2);
 }
 
 .post-date {
