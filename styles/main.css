@@ -72,8 +72,12 @@ img {
 }
 
 .ads {
-    margin-top: 35px;
+    margin-top: 45px;
     margin-left: calc(50% - 468px / 2);
+}
+
+.ads table, .ads tr, .ads td {
+    background-color: none !important;
 }
 
 .post-date {
