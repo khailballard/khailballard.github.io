@@ -2,7 +2,7 @@
 
 cd /home/jessemillar/khailballard.github.io/prepared # Move into the proper directory
 
-git pull # Get the latest from the repo
+git pull # Get the latest code from the repo
 
 for i in prepared/*.md # Nab the next prepared post in line for publication
 do
