@@ -16,6 +16,8 @@ post_date=$(date +%Y-%-m-%-d) # Set the post date to today
 mv prepared/$post_number.md ../_posts/$post_date-$post_number.md
 mv prepared/$post_number.png ../images/posts/$post_number.png
 
+cd .. # Go up a directory so the Git commands work
+
 git add -A
 git commit -m "Automated post"
 git push
