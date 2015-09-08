@@ -45,14 +45,6 @@ img {
 
 .update_schedule {
     font-size: 18px;
-    padding-bottom: 20px;
-}
-
-.container {
-    min-width: 900px;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .horizontalList ul {
