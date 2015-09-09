@@ -34,4 +34,4 @@ mv prepared/$post_number.md ../_posts/$post_date-$post_number.md
 mv prepared/$post_number.png ../images/posts/$post_number.png
 
 # Remind the user to post the post
-printf "Don't forget to commit and push the new post to GitHub!\n"
+printf "Don't forget to commit and push the new post(s) to GitHub!\n"

@@ -1,17 +1,9 @@
 #!/bin/bash
 
-# Check for .jpeg files
+# Check for .jpg files
 image_count=0
 
-for i in *.jpg # Catch "improperly" named files
-do
-    if [ "$i" ] # Only perform if the file exists
-    then
-        mv "$i" "${i%.jpg}.jpeg" # Normalize all files to .jpeg extensions
-    fi
-done
-
-for i in *.jpeg
+for i in *.jpg
 do
     ((image_count++))
 done
@@ -22,17 +14,17 @@ then
 fi
 
 # Rename images to remove "Strip " from the front of the name
-for i in *.jpeg
+for i in *.jpg
 do
     printf "."
-    mv "$i" $(echo "$i" | sed -e "s/Strip \{0,1\}0//g")
+    mv "$i" $(echo "$i" | cut -c 7-)
 done
 
 # Resize images and convert to .png
-mogrify -resize 1000 -format png *.jpeg
+mogrify -resize 1000 -format png *.jpg
 
-# Remove old .jpeg files
-for i in *.jpeg
+# Remove old .jpg files
+for i in *.jpg
 do
     printf "."
     rm "$i"
