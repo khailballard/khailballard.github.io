@@ -13,11 +13,11 @@ then
     exit
 fi
 
-# Rename images to remove "Strip " from the front of the name
+# Rename images to remove "Strip 0" from the front of the name
 for i in *.jpg
 do
     printf "."
-    mv "$i" $(echo "$i" | cut -c 7-)
+    mv "$i" $(echo "$i" | cut -c 8-)
 done
 
 # Resize images and convert to .png
