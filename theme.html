@@ -5,6 +5,7 @@
     <!-- Theme options -->
     <meta name="text:Update Schedule" content="MWF update schedule"/>
     <meta name="color:Comic Links Color" content="#e64733"/>
+    <meta name="if:Show Ads" content="1"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- "Mobile first" -->
@@ -303,31 +304,33 @@
                         </div>
                     </div>
                 {/block:HasPages}
-                <div class="row">
-                    <!-- Ads -->
-                    <div class="col-md-12">
-                        <!-- Project Wonderful Ad Box Code -->
-                        <div id="pw_adbox_77005_1_0" class="ads"></div>
-                        <script type="text/javascript"></script>
-                        <noscript>
-                            <map name="admap77005" id="admap77005">
-                                <area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=77005&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" />
-                            </map>
-                            <table cellpadding="0" cellspacing="0" style="width:468px;border-style:none;">
-                                <tr>
-                                    <td><img src="http://www.projectwonderful.com/nojs.php?id=77005&type=1" style="width:468px;height:60px;border-style:none;" usemap="#admap77005" alt="" /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="1">
-                                        <center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=77005&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center>
-                                    </td>
-                                </tr>
-                            </table>
-                        </noscript>
-                        </script>
-                        <!-- End Project Wonderful Ad Box Code -->
+                {block:IfShowAds}
+                    <div class="row">
+                        <!-- Ads -->
+                        <div class="col-md-12">
+                            <!-- Project Wonderful Ad Box Code -->
+                            <div id="pw_adbox_77005_1_0" class="ads"></div>
+                            <script type="text/javascript"></script>
+                            <noscript>
+                                <map name="admap77005" id="admap77005">
+                                    <area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=77005&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" />
+                                </map>
+                                <table cellpadding="0" cellspacing="0" style="width:468px;border-style:none;">
+                                    <tr>
+                                        <td><img src="http://www.projectwonderful.com/nojs.php?id=77005&type=1" style="width:468px;height:60px;border-style:none;" usemap="#admap77005" alt="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=77005&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </noscript>
+                            </script>
+                            <!-- End Project Wonderful Ad Box Code -->
+                        </div>
                     </div>
-                </div>
+                {/block:IfShowAds}
             {/block:Photo}
         {/block:Posts}
         <div class="row footer">
