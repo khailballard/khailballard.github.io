@@ -5,10 +5,11 @@
     <!-- Theme options -->
     <meta name="text:Update Schedule" content="MWF update schedule"/>
     <meta name="text:Patreon Plug" content="Like Recondite Woods? Support it on Patreon and get awesome stuff!"/>
+    <meta name="text:Comics Endorsement Text" content="Read These"/>
     <meta name="color:Comic Links Color" content="#e64733"/>
     <meta name="if:Show Ads" content="1"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- "Mobile first" -->
     <title>{Title}</title>
     <link rel="shortcut icon" href="{Favicon}">
@@ -131,6 +132,12 @@
     .patreon-logo img {
         width: 40%;
         max-width: 400px;
+    }
+
+    .endorsement {
+        font-size: 1.75em;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     
     .comic-links ul {
@@ -283,18 +290,19 @@
                 {/block:Pagination}
                 <div class="row patreon-text">
                     <div class="col-sm-12">
-                        <a href="https://www.patreon.com/recondite">{text:Patreon Plug}</a>
+                        <a href="https://www.patreon.com/recondite" target="_blank">{text:Patreon Plug}</a>
                     </div>
                 </div>
                 <div class="row patreon-logo">
                     <div class="col-sm-12">
-                        <center><a href="https://www.patreon.com/recondite"><img src="http://khailballard.github.io/images/patreon.svg"></a></center>
+                        <center><a href="https://www.patreon.com/recondite" target="_blank"><img src="http://khailballard.github.io/images/patreon.svg"></a></center>
                     </div>
                 </div>
                 {block:HasPages}
                     <div class="row">
                         <!-- Comic links -->
                         <div class="col-md-12 comic-links">
+                            <center><div class="endorsement">{text:Comics Endorsement Text}</div></center>
                             <ul class="list-group">
                                 {block:Pages}
                                     <li class="list-group-item col-xs-4">
