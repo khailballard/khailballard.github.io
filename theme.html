@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme options -->
+    <meta name="text:Update Schedule" content="MWF update schedule"/>
+    <meta name="color:Comic Links Color" content="#e64733"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- "Mobile first" -->
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <style>
+    body {
+        background-color: #fff;
+        font-family: serif;
+        font-size: 10px;
+        /* Default font size */
+    }
+    
+    .navbar {
+        border-radius: 0;
+    }
+    
+    .navbar-default {
+        background-color: #fff;
+        border: none;
+        font-style: italic;
+        font-size: 1.5em;
+        border-bottom: solid 1px #000;
+        margin-bottom: 35px;
+    }
+    
+    .navbar-default .navbar-nav > li > a,
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #000;
+    }
+    
+    .navbar-default .navbar-toggle {
+        border: none;
+        background-color: none;
+    }
+    
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #000;
+    }
+    
+    .navbar-default .navbar-collapse {
+        border: none;
+    }
+    
+    .above-strip {
+        position: relative;
+        text-align: center;
+    }
+    
+    .above-strip img {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .above-strip .update-schedule {
+        font-style: italic;
+        font-size: 1.75em;
+    }
+
+    .text-post {
+        font-size: 1.5em;
+        margin: 25px 0;
+    }
+    
+    .strip img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .comic-navigation {
+        font-size: 2em;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .comic-navigation .archive {
+        margin-top: 0.1em;
+        padding: 0;
+    }
+
+    .comic-navigation .archive a {
+        color: #000;
+    }
+    
+    .comic-navigation img {
+        height: 1.5em;
+        max-width: 100%;
+    }
+    
+    .patreon-text {
+        border-top: solid 1px #000;
+        text-align: center;
+        padding-top: 25px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .patreon-text a {
+        font-size: 2em;
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .patreon-logo {
+        text-align: center;
+        border-bottom: solid 1px #000;
+        padding-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .patreon-logo img {
+        width: 40%;
+        max-width: 400px;
+    }
+    
+    .comic-links ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .comic-links li {
+        border: none;
+        text-align: center;
+        font-size: 1.25em;
+        padding: 2px 0;
+    }
+
+    .comic-links li a, .comic-links li a:hover {
+        color: {color:Comic Links Color};
+    }
+    
+    .ads {
+        margin-top: 25px;
+        margin-left: calc(50% - 468px / 2);
+        margin-bottom: 35px;
+    }
+    
+    .footer {
+        text-align: center;
+        font-style: italic;
+        font-size: 1em;
+        border-top: solid 1px #000;
+        padding-bottom: 7px;
+        padding-top: 7px;
+        overflow: hidden;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    @media screen and (min-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+        .navbar-default {
+            border-bottom: solid 2px #000;
+        }
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+        }
+        .navbar-nav > li {
+            float: none;
+            display: inline-block;
+        }
+        .above-strip .logo img {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        .above-strip .update-schedule {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            font-size: 1.5em;
+        }
+        .patreon-text {
+            border-top: solid 2px #000;
+        }
+        .patreon-logo {
+            border-bottom: solid 2px #000;
+        }
+        .footer {
+            border-top: solid 2px #000;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav text-center">
+                        <li><a href="{BlogURL}">Home</a></li>
+                        <li><a href="{BlogURL}about">About</a></li>
+                        <li><a href="https://twitter.com/KhailBallard">Twitter</a></li>
+                        <li><a href="http://protaspecs.tumblr.com/">Tumblr</a></li>
+                        <li><a href="https://www.patreon.com/recondite">Patreon</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row above-strip">
+            <!-- Logo and update schedule -->
+            <div class="col-sm-5 logo">
+                <a href="{BlogURL}"><img src="http://khailballard.github.io/images/logo.svg"></a>
+            </div>
+            <div class="col-sm-7 update-schedule">
+                {text:Update Schedule}
+            </div>
+        </div>
+        {block:Posts}
+            {block:Text}
+                <div class="row">
+                    <div class="col-md-12 text-post">
+                        {Body}
+                    </div>
+                </div>
+            {/block:Text}
+            {block:Photo}
+                <div class="row">
+                    <!-- Comic strip -->
+                    <div class="col-md-12 strip">
+                        <a href="{Permalink}"><img src="{PhotoURL-HighRes}" title="{PhotoAlt}"/></a>
+                    </div>
+                </div>
+                {block:Pagination}
+                    <div class="row comic-navigation">
+                        <!-- Comic navigation -->                    
+                        <div class="col-xs-5">
+                            {block:NextPage}
+                                <div class="col-xs-7">
+                                    <center><a href="{BlogURL}page/{TotalPages}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a></center>
+                                </div>
+                                <div class="col-xs-5">
+                                    <center><a href="{NextPage}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a></center>
+                                </div>
+                            {/block:NextPage}
+                        </div>
+                        <div class="col-xs-2 archive">
+                            <a href="{BlogURL}archive">Archive</a>
+                        </div>
+                        <div class="col-xs-5">
+                            {block:PreviousPage}
+                                <div class="col-xs-5">
+                                    <center><a href="{PreviousPage}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a></center>
+                                </div>
+                                <div class="col-xs-7">
+                                    <center><a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a></center>
+                                </div>
+                            {/block:PreviousPage}
+                        </div>
+                    </div>
+                {/block:Pagination}
+                <div class="row patreon-text">
+                    <div class="col-sm-12">
+                        <a href="https://www.patreon.com/recondite">Like Recondite Woods? Support it on Patreon and get awesome stuff!</a>
+                    </div>
+                </div>
+                <div class="row patreon-logo">
+                    <div class="col-sm-12">
+                        <center><a href="https://www.patreon.com/recondite"><img src="http://khailballard.github.io/images/patreon.svg"></a></center>
+                    </div>
+                </div>
+                {block:HasPages}
+                    <div class="row">
+                        <!-- Comic links -->
+                        <div class="col-md-12 comic-links">
+                            <ul class="list-group">
+                                {block:Pages}
+                                    <li class="list-group-item col-xs-4">
+                                        <a href="{URL}">{Label}</a>
+                                    </li>
+                                {/block:Pages}
+                            </ul>
+                        </div>
+                    </div>
+                {/block:HasPages}
+                <div class="row">
+                    <!-- Ads -->
+                    <div class="col-md-12">
+                        <!-- Project Wonderful Ad Box Code -->
+                        <div id="pw_adbox_77005_1_0" class="ads"></div>
+                        <script type="text/javascript"></script>
+                        <noscript>
+                            <map name="admap77005" id="admap77005">
+                                <area href="http://www.projectwonderful.com/out_nojs.php?r=0&c=0&id=77005&type=1" shape="rect" coords="0,0,468,60" title="" alt="" target="_blank" />
+                            </map>
+                            <table cellpadding="0" cellspacing="0" style="width:468px;border-style:none;">
+                                <tr>
+                                    <td><img src="http://www.projectwonderful.com/nojs.php?id=77005&type=1" style="width:468px;height:60px;border-style:none;" usemap="#admap77005" alt="" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1">
+                                        <center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=77005&type=1" target="_blank">Ads by Project Wonderful!  Your ad here, right now: $0</a></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </noscript>
+                        </script>
+                        <!-- End Project Wonderful Ad Box Code -->
+                    </div>
+                </div>
+            {/block:Photo}
+        {/block:Posts}
+        <div class="row footer">
+            <!-- Footer -->
+            <div class="col-md-12">
+                This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution NonCommercial ShareAlike 4.0 International License</a>.
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Project Wonderful Ad Box Loader -->
+<script type="text/javascript">
+(function() {
+    function pw_load() {
+        if (arguments.callee.z) return;
+        else arguments.callee.z = true;
+        var d = document;
+        var s = d.createElement('script');
+        var x = d.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://www.projectwonderful.com/pwa.js';
+        x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent) {
+        window.attachEvent('DOMContentLoaded', pw_load);
+        window.attachEvent('onload', pw_load);
+    } else {
+        window.addEventListener('DOMContentLoaded', pw_load, false);
+        window.addEventListener('load', pw_load, false);
+    }
+})();
+</script>
+<!-- End Project Wonderful Ad Box Loader -->
+<script>
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-65153100-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</html>
