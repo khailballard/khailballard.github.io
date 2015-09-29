@@ -4,6 +4,7 @@
 <head>
     <!-- Theme options -->
     <meta name="text:Update Schedule" content="MWF update schedule"/>
+    <meta name="text:First Post Permalink" content="post/123/abc"/>
     <meta name="text:Patreon Plug" content="Like Recondite Woods? Support it on Patreon and get awesome stuff!"/>
     <meta name="text:Comics Endorsement Text" content="Read These"/>
     <meta name="color:Comic Links Color" content="#e64733"/>
@@ -300,6 +301,34 @@
                         </div>
                     </div>
                 {/block:Pagination}
+                {block:PermalinkPagination}
+                    <div class="row comic-navigation">
+                        <!-- Comic navigation -->                    
+                        <div class="col-xs-5">
+                            {block:PreviousPost}
+                                <div class="col-xs-7">
+                                    <center><a href="{BlogURL}{text:First Post Permalink}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a></center>
+                                </div>
+                                <div class="col-xs-5">
+                                    <center><a href="{PreviousPost}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a></center>
+                                </div>
+                            {/block:PreviousPost}
+                        </div>
+                        <div class="col-xs-2 archive">
+                            <a href="{BlogURL}archive">Archive</a>
+                        </div>
+                        <div class="col-xs-5">
+                            {block:NextPost}
+                                <div class="col-xs-5">
+                                    <center><a href="{NextPost}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a></center>
+                                </div>
+                                <div class="col-xs-7">
+                                    <center><a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a></center>
+                                </div>
+                            {/block:NextPost}
+                        </div>
+                    </div>
+                {/block:PermalinkPagination}
                 <div class="row patreon-text">
                     <div class="col-sm-12">
                         <a href="https://www.patreon.com/recondite" target="_blank">{text:Patreon Plug}</a>
@@ -318,7 +347,7 @@
                             <ul class="list-group">
                                 {block:Pages}
                                     <li class="list-group-item col-xs-4">
-                                        <a href="{URL}">{Label}</a>
+                                        <a href="{URL}" target="_blank">{Label}</a>
                                     </li>
                                 {/block:Pages}
                             </ul>
