@@ -3,21 +3,18 @@
 
 <head>
     <!-- Theme options -->
-    <meta name="text:Update Schedule" content="MWF update schedule"/>
-    <meta name="text:First Post Permalink" content="post/123/abc"/>
-    <meta name="text:Patreon Plug" content="Like Recondite Woods? Support it on Patreon and get awesome stuff!"/>
-    <meta name="text:Comics Endorsement Text" content="Read These"/>
-    <meta name="color:Comic Links Color" content="#e64733"/>
-    <meta name="if:Show Ads" content="1"/>
-
+    <meta name="text:Update Schedule" content="MWF update schedule" />
+    <meta name="text:First Post Permalink" content="post/123/abc" />
+    <meta name="text:Patreon Plug" content="Like Recondite Woods? Support it on Patreon and get awesome stuff!" />
+    <meta name="text:Comics Endorsement Text" content="Read These" />
+    <meta name="color:Comic Links Color" content="#e64733" />
+    <meta name="if:Show Ads" content="1" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- "Mobile first" -->
     <title>{Title}</title>
     <link rel="shortcut icon" href="{Favicon}">
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    {block:Description}
-    <meta name="description" content="{MetaDescription}" />
-    {/block:Description}
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> {block:Description}
+    <meta name="description" content="{MetaDescription}" /> {/block:Description}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
@@ -74,7 +71,7 @@
         font-style: italic;
         font-size: 1.75em;
     }
-
+    
     .text-post {
         font-size: 1.5em;
         margin: 25px 0;
@@ -96,7 +93,7 @@
         margin-top: 0.1em;
         padding: 0;
     }
-
+    
     .comic-navigation .archive a {
         color: #000;
     }
@@ -106,16 +103,18 @@
         max-width: 100%;
     }
     
-    .patreon-text {
+    .sponsor {
         border-top: solid 1px #000;
         text-align: center;
         padding-top: 25px;
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #000;
     }
-
-    .patreon-text a {
+    
+    .sponsor a {
         font-size: 2em;
         color: #000;
         text-decoration: none;
@@ -123,18 +122,22 @@
     
     .patreon-logo {
         text-align: center;
-        border-bottom: solid 1px #000;
-        padding-bottom: 25px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 15px;
+        margin: 0 50px;
+        border: none !important;
     }
     
     .patreon-logo img {
-        width: 40%;
         max-width: 400px;
     }
-
+    
+    .disqus {
+        border-bottom: solid 2px #000;
+        padding-bottom: 50px;
+        padding-top: 25px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
     .endorsement {
         font-size: 1.75em;
         margin-top: 15px;
@@ -152,16 +155,23 @@
         font-size: 1.25em;
         padding: 2px 0;
     }
-
-    .comic-links li a, .comic-links li a:hover {
-        color: {color:Comic Links Color};
+    
+    .comic-links li a,
+    .comic-links li a:hover {
+        color: {
+            color: Comic Links Color
+        }
+        ;
     }
     
     #pw_adbox_77005_1_0 {
         margin-top: 25px;
     }
-
-    #pw_adbox_77005_1_0 img, #pw_adbox_77005_1_0 td, #pw_adbox_77005_1_0 tr, #pw_adbox_77005_1_0 table {
+    
+    #pw_adbox_77005_1_0 img,
+    #pw_adbox_77005_1_0 td,
+    #pw_adbox_77005_1_0 tr,
+    #pw_adbox_77005_1_0 table {
         width: 300px !important;
         height: 38px !important;
     }
@@ -211,7 +221,10 @@
         .patreon-logo {
             border-bottom: solid 2px #000;
         }
-        #pw_adbox_77005_1_0 img, #pw_adbox_77005_1_0 td, #pw_adbox_77005_1_0 tr, #pw_adbox_77005_1_0 table {
+        #pw_adbox_77005_1_0 img,
+        #pw_adbox_77005_1_0 td,
+        #pw_adbox_77005_1_0 tr,
+        #pw_adbox_77005_1_0 table {
             width: 468px !important;
             height: 60px !important;
         }
@@ -254,115 +267,159 @@
                 {text:Update Schedule}
             </div>
         </div>
-        {block:Posts}
-            {block:Text}
-                <div class="row">
-                    <div class="col-md-12 text-post">
-                        {Body}
-                    </div>
+        {block:Posts} {block:Text}
+        <div class="row">
+            <div class="col-md-12 text-post">
+                {Body}
+            </div>
+        </div>
+        {/block:Text} {block:Photo}
+        <div class="row">
+            <!-- Comic strip -->
+            <div class="col-md-12 strip">
+                <a href="{Permalink}"><img src="{PhotoURL-HighRes}" title="{PhotoAlt}" /></a>
+            </div>
+        </div>
+        {block:Pagination}
+        <div class="row comic-navigation">
+            <!-- Comic navigation -->
+            <div class="col-xs-5">
+                {block:NextPage}
+                <div class="col-xs-7">
+                    <center>
+                        <a href="{BlogURL}page/{TotalPages}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a>
+                    </center>
                 </div>
-            {/block:Text}
-            {block:Photo}
-                <div class="row">
-                    <!-- Comic strip -->
-                    <div class="col-md-12 strip">
-                        <a href="{Permalink}"><img src="{PhotoURL-HighRes}" title="{PhotoAlt}"/></a>
-                    </div>
+                <div class="col-xs-5">
+                    <center>
+                        <a href="{NextPage}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a>
+                    </center>
                 </div>
-                {block:Pagination}
-                    <div class="row comic-navigation">
-                        <!-- Comic navigation -->                    
-                        <div class="col-xs-5">
-                            {block:NextPage}
-                                <div class="col-xs-7">
-                                    <center><a href="{BlogURL}page/{TotalPages}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a></center>
-                                </div>
-                                <div class="col-xs-5">
-                                    <center><a href="{NextPage}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a></center>
-                                </div>
-                            {/block:NextPage}
-                        </div>
-                        <div class="col-xs-2 archive">
-                            <a href="{BlogURL}archive">Archive</a>
-                        </div>
-                        <div class="col-xs-5">
-                            {block:PreviousPage}
-                                <div class="col-xs-5">
-                                    <center><a href="{PreviousPage}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a></center>
-                                </div>
-                                <div class="col-xs-7">
-                                    <center><a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a></center>
-                                </div>
-                            {/block:PreviousPage}
-                        </div>
-                    </div>
-                {/block:Pagination}
-                {block:PermalinkPagination}
-                    <div class="row comic-navigation">
-                        <!-- Comic navigation -->                    
-                        <div class="col-xs-5">
-                            {block:PreviousPost}
-                                <div class="col-xs-7">
-                                    <center><a href="{BlogURL}{text:First Post Permalink}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a></center>
-                                </div>
-                                <div class="col-xs-5">
-                                    <center><a href="{PreviousPost}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a></center>
-                                </div>
-                            {/block:PreviousPost}
-                        </div>
-                        <div class="col-xs-2 archive">
-                            <a href="{BlogURL}archive">Archive</a>
-                        </div>
-                        <div class="col-xs-5">
-                            {block:NextPost}
-                                <div class="col-xs-5">
-                                    <center><a href="{NextPost}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a></center>
-                                </div>
-                                <div class="col-xs-7">
-                                    <center><a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a></center>
-                                </div>
-                            {/block:NextPost}
-                        </div>
-                    </div>
-                {/block:PermalinkPagination}
-                <div class="row patreon-text">
-                    <div class="col-sm-12">
-                        <a href="https://www.patreon.com/recondite" target="_blank">{text:Patreon Plug}</a>
-                    </div>
+                {/block:NextPage}
+            </div>
+            <div class="col-xs-2 archive">
+                <a href="{BlogURL}archive">Archive</a>
+            </div>
+            <div class="col-xs-5">
+                {block:PreviousPage}
+                <div class="col-xs-5">
+                    <center>
+                        <a href="{PreviousPage}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a>
+                    </center>
                 </div>
-                <div class="row patreon-logo">
-                    <div class="col-sm-12">
-                        <center><a href="https://www.patreon.com/recondite" target="_blank"><img src="http://khailballard.github.io/images/patreon.svg"></a></center>
-                    </div>
+                <div class="col-xs-7">
+                    <center>
+                        <a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a>
+                    </center>
                 </div>
-                {block:HasPages}
-                    <div class="row">
-                        <!-- Comic links -->
-                        <div class="col-md-12 comic-links">
-                            <center><div class="endorsement">{text:Comics Endorsement Text}</div></center>
-                            <ul class="list-group">
-                                {block:Pages}
-                                    <li class="list-group-item col-xs-4">
-                                        <a href="{URL}" target="_blank">{Label}</a>
-                                    </li>
-                                {/block:Pages}
-                            </ul>
-                        </div>
-                    </div>
-                {/block:HasPages}
-                {block:IfShowAds}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- Project Wonderful Ad Box Code -->
-                            <div style="text-align:center;">
-                                <div style="display:inline-block;" id="pw_adbox_77005_1_0"></div>
-                            </div>
-                            <!-- End Project Wonderful Ad Box Code -->
-                        </div>
-                    </div>
-                {/block:IfShowAds}
-            {/block:Photo}
-        {/block:Posts}
+                {/block:PreviousPage}
+            </div>
+        </div>
+        {/block:Pagination} {block:PermalinkPagination}
+        <div class="row comic-navigation">
+            <!-- Comic navigation -->
+            <div class="col-xs-5">
+                {block:PreviousPost}
+                <div class="col-xs-7">
+                    <center>
+                        <a href="{BlogURL}{text:First Post Permalink}"><img src="http://khailballard.github.io/images/arrow_first.svg"></a>
+                    </center>
+                </div>
+                <div class="col-xs-5">
+                    <center>
+                        <a href="{PreviousPost}"><img src="http://khailballard.github.io/images/arrow_previous.svg"></a>
+                    </center>
+                </div>
+                {/block:PreviousPost}
+            </div>
+            <div class="col-xs-2 archive">
+                <a href="{BlogURL}archive">Archive</a>
+            </div>
+            <div class="col-xs-5">
+                {block:NextPost}
+                <div class="col-xs-5">
+                    <center>
+                        <a href="{NextPost}"><img src="http://khailballard.github.io/images/arrow_next.svg"></a>
+                    </center>
+                </div>
+                <div class="col-xs-7">
+                    <center>
+                        <a href="{BlogURL}"><img src="http://khailballard.github.io/images/arrow_latest.svg"></a>
+                    </center>
+                </div>
+                {/block:NextPost}
+            </div>
+        </div>
+        {/block:PermalinkPagination}
+        <div class="row sponsor">
+            <div class="col-sm-8">
+                <br><a href="https://www.patreon.com/recondite" target="_blank">{text:Patreon Plug}</a>
+                <br>
+                <br>
+                <center>
+                    <a href="https://www.patreon.com/recondite" target="_blank"><img class="patreon-logo" src="http://khailballard.github.io/images/patreon.svg"></a>
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=recondite07-20&marketplace=amazon&region=US&placement=1607747308&asins=1607747308&linkId=6USISJ7F4FJTVUSB&show_border=true&link_opens_in_new_window=true">
+                    </iframe>
+                </center>
+            </div>
+        </div>
+        {block:PermalinkPage}
+        <div class="row disqus">
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+             * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+
+                s.src = '//reconditewoods.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+        {/block:PermalinkPage} {block:HasPages}
+        <div class="row">
+            <!-- Comic links -->
+            <div class="col-md-12 comic-links">
+                <center>
+                    <div class="endorsement">{text:Comics Endorsement Text}</div>
+                </center>
+                <ul class="list-group">
+                    {block:Pages}
+                    <li class="list-group-item col-xs-4">
+                        <a href="{URL}" target="_blank">{Label}</a>
+                    </li>
+                    {/block:Pages}
+                </ul>
+            </div>
+        </div>
+        {/block:HasPages} {block:IfShowAds}
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Project Wonderful Ad Box Code -->
+                <div style="text-align:center;">
+                    <div style="display:inline-block;" id="pw_adbox_77005_1_0"></div>
+                </div>
+                <!-- End Project Wonderful Ad Box Code -->
+            </div>
+        </div>
+        {/block:IfShowAds} {/block:Photo} {/block:Posts}
         <div class="row footer">
             <!-- Footer -->
             <div class="col-md-12">
@@ -373,19 +430,26 @@
 </body>
 <!-- Project Wonderful Ad Box Loader -->
 <script type="text/javascript">
-   (function(){function pw_load(){
-      if(arguments.callee.z)return;else arguments.callee.z=true;
-      var d=document;var s=d.createElement('script');
-      var x=d.getElementsByTagName('script')[0];
-      s.type='text/javascript';s.async=true;
-      s.src='//www.projectwonderful.com/pwa.js';
-      x.parentNode.insertBefore(s,x);}
-   if (window.attachEvent){
-    window.attachEvent('DOMContentLoaded',pw_load);
-    window.attachEvent('onload',pw_load);}
-   else{
-    window.addEventListener('DOMContentLoaded',pw_load,false);
-    window.addEventListener('load',pw_load,false);}})();
+(function() {
+    function pw_load() {
+        if (arguments.callee.z) return;
+        else arguments.callee.z = true;
+        var d = document;
+        var s = d.createElement('script');
+        var x = d.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//www.projectwonderful.com/pwa.js';
+        x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent) {
+        window.attachEvent('DOMContentLoaded', pw_load);
+        window.attachEvent('onload', pw_load);
+    } else {
+        window.addEventListener('DOMContentLoaded', pw_load, false);
+        window.addEventListener('load', pw_load, false);
+    }
+})();
 </script>
 <!-- End Project Wonderful Ad Box Loader -->
 <script>
